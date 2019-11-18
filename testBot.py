@@ -15,9 +15,12 @@ async def on_ready():
 async def on_member_join(member):
     print(f'{member} has joined server.')
 
+
 @client.event
 async def on_member_remove(member):
     print(f'{member} has left server.')
+
+    
 @client.command()
 async def botPing(ctx):
     await ctx.send(f'Ping! {round(client.latency *1000)}ms')
